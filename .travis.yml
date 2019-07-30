@@ -1,0 +1,22 @@
+sudo: required 
+language: generic 
+compiler:
+  - gcc
+notifications:
+  email:
+    on_success: change
+    on_failure: always
+    recipients:
+      - avishaya@amazon.com
+env:
+  matrix:
+    - ROS_DISTRO="dashing" ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu
+    - ROS_DISTRO="dashing" PRERELEASE=true
+    - ROS_DISTRO="dashing" ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu
+    - ROS_DISTRO="dashing" PRERELEASE=true
+install:
+  - git clone https://github.com/aws-robotics/utils-common.git utils-common
+  - git clone https://github.com/aws-robotics/utils-ros2.git utils-ros2
+  - git clone -b colcon-rebase https://github.com/ipa-mdl/industrial_ci.git .ros_ci
+script:
+  - .ros_ci/travis.sh
