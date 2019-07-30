@@ -12,8 +12,6 @@ env:
   matrix:
     - ROS_DISTRO="dashing"
     - ROS_DISTRO="dashing" PRERELEASE=true
-    - ROS_DISTRO="dashing"
-    - ROS_DISTRO="dashing" PRERELEASE=true
 install:
   - git clone https://github.com/aws-robotics/utils-common.git utils-common
   - git clone https://github.com/aws-robotics/utils-ros2.git utils-ros2
