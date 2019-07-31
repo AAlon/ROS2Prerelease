@@ -15,6 +15,9 @@ env:
 install:
   - git clone https://github.com/AAlon/utils-common.git utils-common
   - git clone https://github.com/AAlon/utils-ros2.git utils-ros2
+  - git clone https://github.com/aws-robotics/kinesisvideo-common kinesisvideo-common
+  - git clone https://github.com/aws-robotics/cloudwatch-common cloudwatch-common
+  - git clone https://github.com/aws-robotics/kinesisvideo-encoder-common kinesisvideo-encoder-common
   - git clone -b colcon-rebase https://github.com/ipa-mdl/industrial_ci.git .ros_ci
 script:
   - .ros_ci/travis.sh
