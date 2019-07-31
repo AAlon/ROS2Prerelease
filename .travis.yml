@@ -18,7 +18,7 @@ install:
   - git clone https://github.com/aws-robotics/kinesisvideo-common kinesisvideo-common
   - git clone https://github.com/aws-robotics/cloudwatch-common cloudwatch-common
   - git clone https://github.com/aws-robotics/kinesisvideo-encoder-common kinesisvideo-encoder-common
-  - git clone -b launch_script https://github.com/aws-robotics/kinesisvideo-ros2 kinesisvideo-ros2
+  - git clone -b launch_script https://github.com/AAlon/kinesisvideo-ros2 kinesisvideo-ros2
   - git clone -b AAlon-patch-2 https://github.com/aws-robotics/kinesisvideo-encoder-ros2 kinesisvideo-encoder-ros2
   - git clone -b colcon-rebase https://github.com/ipa-mdl/industrial_ci.git .ros_ci
 script:
