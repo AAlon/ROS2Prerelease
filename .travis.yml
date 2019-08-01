@@ -21,6 +21,8 @@ install:
   - git clone https://github.com/AAlon/kinesisvideo-ros2 kinesisvideo-ros2
   - git clone https://github.com/aws-robotics/kinesisvideo-encoder-ros2 kinesisvideo-encoder-ros2
   - git clone https://github.com/aws-robotics/monitoringmessages-ros2 monitoringmessages-ros2
+  - git clone https://github.com/aws-robotics/lex-common lex-common
+  - git clone https://github.com/aws-robotics/lex-ros2 lex-ros2
   - git clone -b colcon-rebase https://github.com/ipa-mdl/industrial_ci.git .ros_ci
 script:
   - .ros_ci/travis.sh
