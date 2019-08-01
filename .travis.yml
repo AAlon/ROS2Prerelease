@@ -11,7 +11,7 @@ notifications:
 env:
   matrix:
     - ROS_DISTRO="dashing"
-    - ROS_DISTRO="dashing" PRERELEASE=true
+    - ROS_DISTRO="dashing" PRERELEASE=true ABORT_ON_TEST_FAILURE=1
 install:
   - git clone https://github.com/AAlon/utils-common.git utils-common
   - git clone https://github.com/AAlon/utils-ros2.git utils-ros2
