@@ -15,11 +15,11 @@ env:
 install:
   - git clone https://github.com/AAlon/utils-common.git utils-common
   - git clone https://github.com/AAlon/utils-ros2.git utils-ros2
-  - git clone https://github.com/aws-robotics/kinesisvideo-common kinesisvideo-common
+  #- git clone https://github.com/aws-robotics/kinesisvideo-common kinesisvideo-common
   #- git clone https://github.com/aws-robotics/cloudwatch-common cloudwatch-common
-  - git clone https://github.com/aws-robotics/kinesisvideo-encoder-common kinesisvideo-encoder-common
-  - git clone -b stable-tests https://github.com/aws-robotics/kinesisvideo-ros2 kinesisvideo-ros2
-  - git clone -b AAlon-patch-2 https://github.com/aws-robotics/kinesisvideo-encoder-ros2 kinesisvideo-encoder-ros2
-  - git clone -b colcon-rebase https://github.com/ipa-mdl/industrial_ci.git .ros_ci
+  #- git clone https://github.com/aws-robotics/kinesisvideo-encoder-common kinesisvideo-encoder-common
+  #- git clone -b stable-tests https://github.com/aws-robotics/kinesisvideo-ros2 kinesisvideo-ros2
+  #- git clone -b AAlon-patch-2 https://github.com/aws-robotics/kinesisvideo-encoder-ros2 kinesisvideo-encoder-ros2
+  #- git clone -b colcon-rebase https://github.com/ipa-mdl/industrial_ci.git .ros_ci
 script:
   - .ros_ci/travis.sh
