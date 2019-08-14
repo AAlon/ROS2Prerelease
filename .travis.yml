@@ -15,18 +15,18 @@ env:
 install:
   - git clone https://github.com/aws-robotics/utils-common.git utils-common
   - git clone https://github.com/aws-robotics/utils-ros2.git utils-ros2
-  #- git clone https://github.com/aws-robotics/kinesisvideo-common kinesisvideo-common
+  - git clone https://github.com/aws-robotics/kinesisvideo-common kinesisvideo-common
   - git clone https://github.com/aws-robotics/cloudwatch-common cloudwatch-common
-  #- git clone https://github.com/aws-robotics/kinesisvideo-encoder-common kinesisvideo-encoder-common
-  #- git clone https://github.com/aws-robotics/kinesisvideo-ros2 kinesisvideo-ros2
-  #- git clone https://github.com/aws-robotics/kinesisvideo-encoder-ros2 kinesisvideo-encoder-ros2
+  - git clone https://github.com/aws-robotics/kinesisvideo-encoder-common kinesisvideo-encoder-common
+  - git clone https://github.com/aws-robotics/kinesisvideo-ros2 kinesisvideo-ros2
+  - git clone https://github.com/aws-robotics/kinesisvideo-encoder-ros2 kinesisvideo-encoder-ros2
   - git clone https://github.com/aws-robotics/monitoringmessages-ros2 monitoringmessages-ros2
-  #- git clone https://github.com/AAlon/health-metrics-collector-ros2
-  #- git clone https://github.com/aws-robotics/lex-common lex-common
-  #- git clone https://github.com/aws-robotics/lex-ros2 lex-ros2
+  - git clone https://github.com/AAlon/health-metrics-collector-ros2
+  - git clone https://github.com/aws-robotics/lex-common lex-common
+  - git clone https://github.com/aws-robotics/lex-ros2 lex-ros2
   - git clone https://github.com/aws-robotics/cloudwatchlogs-ros2 cloudwatchlogs-ros2
   - git clone https://github.com/aws-robotics/cloudwatchmetrics-ros2 cloudwatchmetrics-ros2
-  #- git clone -b ros2-find https://github.com/AAlon/xacro xacro 
+  - git clone -b ros2-find https://github.com/AAlon/xacro xacro 
   - git clone -b colcon-rebase https://github.com/ipa-mdl/industrial_ci.git .ros_ci
 script:
   - .ros_ci/travis.sh
