@@ -12,10 +12,9 @@ notifications:
 env:
   matrix:
     - ROS_DISTRO="dashing" ROS_REPO=testing
-    - ROS_DISTRO="dashing" ROS_REPOSITORY_PATH="http://packages.ros.org/ros2-testing/ubuntu"
     - ROS_DISTRO="dashing" ROS_REPOSITORY_PATH="http://packages.ros.org/ros2-testing/ubuntu" PRERELEASE=true ABORT_ON_TEST_FAILURE=1
 install:
-  - git clone https://github.com/aws-robotics/utils-ros2.git utils-ros2
+  - git clone https://github.com/AAlon/utils-ros2.git utils-ros2
   - git clone -b master https://github.com/ros-industrial/industrial_ci .ros_ci
 script:
   - .ros_ci/travis.sh
