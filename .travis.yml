@@ -11,6 +11,7 @@ notifications:
       - avishayalon@gmail.com
 env:
   matrix:
+    - ROS_DISTRO="dashing" ROS_REPO=testing
     - ROS_DISTRO="dashing" ROS_REPOSITORY_PATH="http://packages.ros.org/ros2-testing/ubuntu"
     - ROS_DISTRO="dashing" ROS_REPOSITORY_PATH="http://packages.ros.org/ros2-testing/ubuntu" PRERELEASE=true ABORT_ON_TEST_FAILURE=1
 install:
