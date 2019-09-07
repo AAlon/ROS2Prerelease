@@ -11,23 +11,10 @@ notifications:
       - avishayalon@gmail.com
 env:
   matrix:
-    - ROS_DISTRO="dashing"
-    - ROS_DISTRO="dashing" PRERELEASE=true ABORT_ON_TEST_FAILURE=1
+    - ROS_DISTRO="dashing" ROS_REPOSITORY_PATH="http://packages.ros.org/ros2-testing/ubuntu"
+    - ROS_DISTRO="dashing" ROS_REPOSITORY_PATH="http://packages.ros.org/ros2-testing/ubuntu" PRERELEASE=true ABORT_ON_TEST_FAILURE=1
 install:
-  - git clone https://github.com/aws-robotics/utils-common.git utils-common
   - git clone https://github.com/aws-robotics/utils-ros2.git utils-ros2
-  - git clone https://github.com/aws-robotics/kinesisvideo-common kinesisvideo-common
-  - git clone https://github.com/aws-robotics/cloudwatch-common cloudwatch-common
-  - git clone https://github.com/aws-robotics/kinesisvideo-encoder-common kinesisvideo-encoder-common
-  - git clone https://github.com/aws-robotics/kinesisvideo-ros2 kinesisvideo-ros2
-  - git clone https://github.com/aws-robotics/kinesisvideo-encoder-ros2 kinesisvideo-encoder-ros2
-  - git clone https://github.com/aws-robotics/monitoringmessages-ros2 monitoringmessages-ros2
-  - git clone https://github.com/aws-robotics/health-metrics-collector-ros2 health-metrics-collector-ros2
-  - git clone https://github.com/aws-robotics/lex-common lex-common
-  - git clone https://github.com/aws-robotics/lex-ros2 lex-ros2
-  - git clone https://github.com/aws-robotics/tts-ros2 tts-ros2
-  - git clone https://github.com/aws-robotics/cloudwatchlogs-ros2 cloudwatchlogs-ros2
-  - git clone https://github.com/aws-robotics/cloudwatchmetrics-ros2 cloudwatchmetrics-ros2
   - git clone -b master https://github.com/ros-industrial/industrial_ci .ros_ci
 script:
   - .ros_ci/travis.sh
