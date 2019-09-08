@@ -17,7 +17,7 @@ env:
 install:
   - git clone https://github.com/AAlon/utils-ros2.git utils-ros2
   - git clone https://github.com/AAlon/kinesisvideo-common.git kinesisvideo-common
-  - git clone https://github.com/aws-robotics/kinesisvideo-ros2.git kinesisvideo-ros2
+  - git clone https://github.com/AAlon/kinesisvideo-ros2.git kinesisvideo-ros2
   - git clone -b master https://github.com/ros-industrial/industrial_ci .ros_ci
 script:
   - .ros_ci/travis.sh
