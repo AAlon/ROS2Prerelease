@@ -13,10 +13,9 @@ env:
   matrix:
     - ROS_DISTRO="dashing" ROS_REPO=testing
     - ROS_DISTRO="dashing" ROS_REPOSITORY_PATH="http://packages.ros.org/ros2-testing/ubuntu" PRERELEASE=true ABORT_ON_TEST_FAILURE=1
-    - ROS_DISTRO="dashing" ROS_REPO=building
     - ROS_DISTRO="dashing" ROS_REPOSITORY_PATH="http://repo.ros2.org/ubuntu/building" PRERELEASE=true ABORT_ON_TEST_FAILURE=1
 install:
-  - git clone -b only-msgs https://github.com/AAlon/kinesisvideo-ros2 kinesisvideo-ros2
+  - git clone https://github.com/aws-robotics/kinesisvideo-ros2 kinesisvideo-ros2
   - git clone -b master https://github.com/ros-industrial/industrial_ci .ros_ci
 script:
   - .ros_ci/travis.sh
