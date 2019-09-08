@@ -16,7 +16,7 @@ env:
     - ROS_DISTRO="dashing" ROS_REPO=building
     - ROS_DISTRO="dashing" ROS_REPOSITORY_PATH="http://repo.ros2.org/ubuntu/building" PRERELEASE=true ABORT_ON_TEST_FAILURE=1
 install:
-  - git clone -b release-latest https://github.com/aws-robotics/kinesisvideo-ros2 kinesisvideo-ros2
+  - git clone -b only-msgs https://github.com/AAlon/kinesisvideo-ros2 kinesisvideo-ros2
   - git clone -b master https://github.com/ros-industrial/industrial_ci .ros_ci
 script:
   - .ros_ci/travis.sh
