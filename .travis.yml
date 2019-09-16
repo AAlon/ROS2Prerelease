@@ -33,5 +33,5 @@ install:
   - git clone https://github.com/aws-robotics/cloudwatchmetrics-ros2 cloudwatchmetrics-ros2
   - git clone -b master https://github.com/ros-industrial/industrial_ci .ros_ci
 script:
-  - sed -i 's/"dashing")/"dashing"|"eloquent")/g' industrial_ci/industrial_ci/src/env.sh
+  - sed -i 's/"dashing")/"dashing"|"eloquent")/g' .ros_ci/industrial_ci/src/env.sh
   - .ros_ci/travis.sh
