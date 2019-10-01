@@ -28,10 +28,11 @@ install:
   #- mv vi_app/robot_ws vi_robot_ws && rm -rf vi_app
   #- rm vi_robot_ws/.rosinstall  
   - rm -rf vi_app/simulation_ws
+  - git clone https://github.com/aws-robotics/travis-scripts.git .b9_ci
   - git clone -b master https://github.com/ros-industrial/industrial_ci .ros_ci
 script:
   #- sed -i 's/"dashing")/"dashing"|"eloquent")/g' .ros_ci/industrial_ci/src/env.sh
-  - . .ros_ci/add_tag.sh
+  - . .b9_ci/add_tag.sh
   - set +e; while sleep 9m; do echo "=====[ $SECONDS seconds still running ]====="; done &
   - sleep 10
   - kill %1
