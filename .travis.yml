@@ -35,3 +35,4 @@ script:
   - set +e; trap 'exit 0' USR1; trap 'exit 0' INT; trap 'exit 0' TERM; while sleep 5m & wait $!; do echo "=====[ $SECONDS seconds still running ]====="; done &
   - sleep 10
   - kill -SIGUSR1 %1
+  - killall -SIGUSR1 sleep 2>/dev/null
