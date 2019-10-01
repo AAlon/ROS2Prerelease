@@ -45,4 +45,3 @@ deploy:
       branch: master
 after_deploy:
 - echo "After deploy"
-- exit 0
