@@ -35,7 +35,6 @@ script:
   - set +e; while sleep 9m; do echo "=====[ $SECONDS seconds still running ]====="; done &
   - sleep 10
   - kill %1
-  - exit 0
 before_deploy:
 - echo "Before deploy"
 deploy:
@@ -45,3 +44,4 @@ deploy:
       branch: master
 after_deploy:
 - echo "After deploy"
+- exit 0
