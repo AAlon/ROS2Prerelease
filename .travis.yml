@@ -29,6 +29,9 @@ install:
   #- rm vi_robot_ws/.rosinstall  
   - rm -rf vi_app/simulation_ws
   - git clone https://github.com/aws-robotics/travis-scripts.git .b9_ci
+  - sed -i 's/.*S3_BUCKET.*//g' .b9_ci/before_deploy.sh
+  - mkdir shared
+  - touch shared/version.json
   - git clone -b master https://github.com/ros-industrial/industrial_ci .ros_ci
 script:
   #- sed -i 's/"dashing")/"dashing"|"eloquent")/g' .ros_ci/industrial_ci/src/env.sh
