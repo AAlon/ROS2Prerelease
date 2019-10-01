@@ -33,7 +33,7 @@ install:
 script:
   #- sed -i 's/"dashing")/"dashing"|"eloquent")/g' .ros_ci/industrial_ci/src/env.sh
   - . .b9_ci/add_tag.sh
-  - set +e; while sleep 9m; do echo "=====[ $SECONDS seconds still running ]====="; done &
+  - while sleep 9m; do echo "=====[ $SECONDS seconds still running ]====="; done &
   - sleep 10
   - kill %1
 before_deploy:
@@ -45,3 +45,4 @@ deploy:
       branch: master
 after_deploy:
 - echo "After deploy"
+- exit 0
