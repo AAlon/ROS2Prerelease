@@ -36,4 +36,12 @@ script:
   - sleep 10
   - kill %1
   - exit 0
-  
+before_deploy:
+- echo "Before deploy"
+deploy:
+  - provider: script
+    script: echo "Deploy step"
+    on:
+      branch: master
+after_deploy:
+- echo "After deploy"
