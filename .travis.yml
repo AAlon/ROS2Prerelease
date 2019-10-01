@@ -33,5 +33,5 @@ script:
   #- sed -i 's/"dashing")/"dashing"|"eloquent")/g' .ros_ci/industrial_ci/src/env.sh
   - . .ros_ci/add_tag.sh
   - set +e; while sleep 9m; do echo "=====[ $SECONDS seconds still running ]====="; done &
-  - .ros_ci/travis.sh
+  - sleep 10
   - kill %1
