@@ -36,3 +36,4 @@ script:
   - sleep 10
   - kill -SIGUSR1 %1
   - killall sleep 2>/dev/null
+  - exit 0
