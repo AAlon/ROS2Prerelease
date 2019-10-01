@@ -37,7 +37,7 @@ script:
   - sleep 10
   - kill %1
 before_deploy:
-- . .ros_ci/before_deploy.sh
+- . .b9_ci/before_deploy.sh
 deploy:
   - provider: script
     script: echo "Deploy step"
