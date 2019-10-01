@@ -34,6 +34,5 @@ script:
   - . .ros_ci/add_tag.sh
   - set +e; trap 'exit 0' USR1; trap 'exit 0' INT; trap 'exit 0' TERM; while sleep 5m & wait $!; do echo "=====[ $SECONDS seconds still running ]====="; done &
   - sleep 10
-  - kill -SIGUSR1 %1
   - killall sleep 2>/dev/null
-  - exit 0
+  - kill -SIGUSR1 %1
