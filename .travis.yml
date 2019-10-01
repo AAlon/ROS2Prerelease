@@ -24,7 +24,7 @@ env:
     - GH_USER_EMAIL="travis@travis-ci.org"
     - AWS_DEFAULT_REGION=us-west-2
 install:
-  - git clone https://github.com/aws-robotics/aws-robomaker-sample-application-helloworld vi_app
+  - git clone -b ros2 https://github.com/aws-robotics/aws-robomaker-sample-application-helloworld vi_app
   #- mv vi_app/robot_ws vi_robot_ws && rm -rf vi_app
   #- rm vi_robot_ws/.rosinstall  
   - rm -rf vi_app/simulation_ws
