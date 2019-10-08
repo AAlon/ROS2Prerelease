@@ -16,8 +16,20 @@ env:
     - ROS_DISTRO="dashing" ROS_REPOSITORY_PATH="http://packages.ros.org/ros2-testing/ubuntu" PRERELEASE=true ABORT_ON_TEST_FAILURE=1
     #- ROS_DISTRO="dashing" ROS_REPOSITORY_PATH="http://repo.ros2.org/ubuntu/building" PRERELEASE=true ABORT_ON_TEST_FAILURE=1
     #- ROS_DISTRO="eloquent" ROS_REPOSITORY_PATH="http://packages.ros.org/ros2-testing/ubuntu" PRERELEASE=true ABORT_ON_TEST_FAILURE=1
+  global:
+    - GH_USER_NAME="travis-ci"
+    - GH_USER_EMAIL="travis@travis-ci.org"
+    - AWS_DEFAULT_REGION=us-west-2
 install:
-  - git clone https://github.com/aws-robotics/utils-ros2 utils-ros2
+  - git clone -b ros2-devel https://github.com/aws-robotics/aws-robomaker-sample-application-voiceinteraction vi_app
+  - mv vi_app/robot_ws vi_robot_ws && rm -rf vi_app
+  - rm vi_robot_ws/.rosinstall
+  - git clone https://github.com/aws-robotics/lex-ros2.git
+  #- git clone -b ros2 https://github.com/aws-robotics/aws-robomaker-bookstore-world
+  #- git clone -b ros2 https://github.com/aws-robotics/turtlebot3-description-reduced-mesh
   - git clone -b master https://github.com/ros-industrial/industrial_ci .ros_ci
 script:
+  #- sed -i 's/"dashing")/"dashing"|"eloquent")/g' .ros_ci/industrial_ci/src/env.sh
+  - set +e; while sleep 9m; do echo "=====[ $SECONDS seconds still running ]====="; done &
   - .ros_ci/travis.sh
+  - kill %1
