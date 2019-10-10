@@ -12,10 +12,11 @@ notifications:
 env:
   matrix:
     #- ROS_DISTRO="dashing"
+    - ROS_DISTRO="eloquent"
     - ROS_DISTRO="eloquent" DOCKER_BASE_IMAGE=osrf/ros2:nightly # ROS_REPO=testing
     #- ROS_DISTRO="dashing" ROS_REPOSITORY_PATH="http://packages.ros.org/ros2-testing/ubuntu" PRERELEASE=true ABORT_ON_TEST_FAILURE=1
     #- ROS_DISTRO="dashing" ROS_REPOSITORY_PATH="http://repo.ros2.org/ubuntu/building" PRERELEASE=true ABORT_ON_TEST_FAILURE=1
-    - ROS_DISTRO="eloquent" DOCKER_BASE_IMAGE=osrf/ros2:nightly ROS_REPOSITORY_PATH="http://packages.ros.org/ros2-testing/ubuntu" PRERELEASE=true ABORT_ON_TEST_FAILURE=1
+    - ROS_DISTRO="eloquent" DOCKER_IMAGE=osrf/ros2:nightly PRERELEASE=true ABORT_ON_TEST_FAILURE=1
   global:
     - GH_USER_NAME="travis-ci"
     - GH_USER_EMAIL="travis@travis-ci.org"
