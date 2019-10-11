@@ -27,12 +27,12 @@ install:
   - git clone https://github.com/aws-robotics/kinesisvideo-common kinesisvideo-common
   - git clone https://github.com/aws-robotics/cloudwatch-common cloudwatch-common
   - git clone https://github.com/aws-robotics/kinesisvideo-encoder-common kinesisvideo-encoder-common
-  - git clone https://github.com/aws-robotics/kinesisvideo-ros2 kinesisvideo-ros2
+  #- git clone https://github.com/aws-robotics/kinesisvideo-ros2 kinesisvideo-ros2 # Subscriber/Publisher API incompat
   #- git clone https://github.com/aws-robotics/kinesisvideo-encoder-ros2 kinesisvideo-encoder-ros2 # Subscriber/Publisher API incompat
   - git clone https://github.com/aws-robotics/monitoringmessages-ros2 monitoringmessages-ros2
   #- git clone https://github.com/aws-robotics/health-metrics-collector-ros2 health-metrics-collector-ros2 # CMake Error: ament_target_dependencies() the passed package name 'health_metric_collector_lib' was not found before
   - git clone https://github.com/aws-robotics/lex-common lex-common
-  - git clone https://github.com/aws-robotics/lex-ros2 lex-ros2
+  #- git clone https://github.com/aws-robotics/lex-ros2 lex-ros2 # CMake Error: ament_target_dependencies() the passed package name 'lex_node_lib' was not found before
   - git clone https://github.com/aws-robotics/tts-ros2 tts-ros2
   - git clone https://github.com/aws-robotics/cloudwatchlogs-ros2 cloudwatchlogs-ros2
   - git clone https://github.com/aws-robotics/cloudwatchmetrics-ros2 cloudwatchmetrics-ros2
