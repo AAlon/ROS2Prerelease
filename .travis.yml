@@ -34,7 +34,7 @@ install:
   - git clone https://github.com/aws-robotics/lex-common lex-common
   #- git clone https://github.com/aws-robotics/lex-ros2 lex-ros2 # CMake Error: ament_target_dependencies() the passed package name 'lex_node_lib' was not found before
   - git clone https://github.com/aws-robotics/tts-ros2 tts-ros2
-  - git clone https://github.com/aws-robotics/cloudwatchlogs-ros2 cloudwatchlogs-ros2
+  #- git clone https://github.com/aws-robotics/cloudwatchlogs-ros2 cloudwatchlogs-ros2 # CMake Error: ament_target_dependencies() the passed package name 'std_msgs' was not found before
   - git clone https://github.com/aws-robotics/cloudwatchmetrics-ros2 cloudwatchmetrics-ros2
   - git clone -b master https://github.com/ros-industrial/industrial_ci .ros_ci
 script:
