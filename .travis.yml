@@ -22,7 +22,7 @@ env:
     - GH_USER_EMAIL="travis@travis-ci.org"
     - AWS_DEFAULT_REGION=us-west-2
 install:
-  - git clone https://github.com/aws-robotics/aws-robomaker-simulation-ros-pkgs
+  - git clone -b dashing https://github.com/aws-robotics/aws-robomaker-simulation-ros-pkgs
   - git clone -b master https://github.com/ros-industrial/industrial_ci .ros_ci
 script:
   - sed -i 's/"dashing")/"dashing"|"eloquent")/g' .ros_ci/industrial_ci/src/env.sh
